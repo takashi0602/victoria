@@ -6,6 +6,7 @@
     <body>
         <div id="app">
             hello, world!
+            {{ $tweets }}
         </div>
     </body>
 </html>
