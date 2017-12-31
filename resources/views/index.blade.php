@@ -5,8 +5,9 @@
     </head>
     <body>
         <div id="app">
-            hello, world!
-            {{ dd($tweets) }}
+            @foreach($tweets as $tweet)
+                {{ $tweet->tweet }}
+            @endforeach
         </div>
     </body>
 </html>
