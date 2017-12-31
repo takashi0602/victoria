@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 class IndexController extends Controller
 {
     public function search() {
-        return view('index');
+//        $tweets = DB::table('tweets')->get();
+        return view('index', [
+            'tweets' => 'aa'
+        ]);
     }
 
     /**
