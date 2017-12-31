@@ -6,7 +6,7 @@
     <body>
         <div id="app">
             hello, world!
-            {{ $tweets }}
+            {{ dd($tweets) }}
         </div>
     </body>
 </html>

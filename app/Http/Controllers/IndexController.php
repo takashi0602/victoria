@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
+
 class IndexController extends Controller
 {
     public function search() {
-//        $tweets = DB::table('tweets')->get();
+        $tweets = DB::select('SELECT * FROM tweets');
         return view('index', [
-            'tweets' => 'aa'
+            'tweets' => $tweets
         ]);
     }
 
