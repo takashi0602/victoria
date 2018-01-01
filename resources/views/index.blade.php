@@ -4,8 +4,12 @@
         <title>Victoria</title>
     </head>
     <body>
+        {{--<div id="app">--}}
+            {{--{{ dd($tweets) }}--}}
+        {{--</div>--}}
         <div id="app">
-            {{ dd($tweets) }}
+            <example></example>
         </div>
+        <script src="js/app.js"></script>
     </body>
 </html>
