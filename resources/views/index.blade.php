@@ -4,9 +4,6 @@
         <title>Victoria</title>
     </head>
     <body>
-        {{--<div id="app">--}}
-            {{--{{ dd($tweets) }}--}}
-        {{--</div>--}}
         <div id="app">
             <example></example>
         </div>
