@@ -16,8 +16,14 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        created() {
+            axios.get('api/search')
+                .then(response => {
+                    console.log(response.data);
+                })
+                .catch(err => {
+
+                });
         }
     }
 </script>
