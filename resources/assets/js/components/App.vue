@@ -19,12 +19,12 @@
 
             axios.get('api/search')
                 .then(response => {
-                    console.log(response.data);
-                    this.tweets = response.data;
+                    console.log(response.data)
+                    this.tweets = response.data
                 })
                 .catch(err => {
 
-                });
+                })
         }
     }
 </script>
