@@ -1,6 +1,7 @@
 <template lang="pug">
-    //p {{ tweets }}
-    p {{ count }}
+    div
+        //p {{ tweets }}
+        p {{ count }}
 </template>
 
 <script>
