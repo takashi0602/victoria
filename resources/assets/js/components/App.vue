@@ -1,15 +1,21 @@
 <template lang="pug">
-    p {{ tweets }}
+    //p {{ tweets }}
+    p {{ count }}
 </template>
 
 <script>
     export default {
         data() {
             return {
-                tweets: []
+                tweets: [],
+                count: 0
             }
         },
         created() {
+            setInterval(() => {
+                this.count++
+            }, 3000)
+
             axios.get('api/search')
                 .then(response => {
                     console.log(response.data);
