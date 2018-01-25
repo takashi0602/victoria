@@ -11,8 +11,8 @@ class TweetCreateSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 100; $i++) {
-            DB::table('tweets')->insert(['tweet' => 'hoge']);
+        for ($i = 1; $i <= 50; $i++) {
+            DB::table('tweets')->insert(['tweet' => $i]);
         }
     }
 }
