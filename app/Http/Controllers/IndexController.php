@@ -10,7 +10,7 @@ class IndexController extends Controller
     }
 
     public function getTweets() {
-        $tweets = DB::select('SELECT * FROM tweets');
+        $tweets = DB::table('tweets')->get();
         $tweets = json_encode($tweets);
         return $tweets;
     }
