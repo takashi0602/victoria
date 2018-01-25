@@ -44,7 +44,7 @@ DB_CONNECTION=sqlite
 $ php artisan migrate
 ```
 
-### 6. Start local server
+### 6. Start up local server
 
 ```
 $ php -S localhost:8000 -t public
