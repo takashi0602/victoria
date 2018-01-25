@@ -177,11 +177,11 @@
 
             this.changeColor()
             this.changeDelay()
-//            this.getTweets()
+            this.getTweets()
             setInterval(() => {
                 this.changeColor()
                 this.changeDelay()
-//                this.getTweets()
+                this.getTweets()
             }, 25000)
         },
         mounted() {

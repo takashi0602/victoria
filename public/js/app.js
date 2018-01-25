@@ -13658,11 +13658,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         this.changeColor();
         this.changeDelay();
-        //            this.getTweets()
+        this.getTweets();
         setInterval(function () {
             _this2.changeColor();
             _this2.changeDelay();
-            //                this.getTweets()
+            _this2.getTweets();
         }, 25000);
     },
     mounted: function mounted() {
