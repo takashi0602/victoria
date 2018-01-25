@@ -3,9 +3,9 @@
         <div class="box">
             <video autoplay id="video" class="video"></video>
             <div v-bind:class="className"></div>
-            <div id="comment0" class="comment" v-bind:class="[ color[0], delay[0] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment1" class="comment" v-bind:class="[ color[1], delay[1] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment2" class="comment" v-bind:class="[ color[2], delay[2] ]">ほげほげほげほげほげほげ</div>
+            <div id="comment0" class="comment" v-bind:class="[ color[0], delay[0] ]">{{}}</div>
+            <div id="comment1" class="comment" v-bind:class="[ color[1], delay[1] ]">{{}}</div>
+            <div id="comment2" class="comment" v-bind:class="[ color[2], delay[2] ]">{{}}</div>
             <div id="comment3" class="comment" v-bind:class="[ color[3], delay[3] ]">ほげほげほげほげほげほげ</div>
             <div id="comment4" class="comment" v-bind:class="[ color[4], delay[4] ]">ほげほげほげほげほげほげ</div>
             <div id="comment5" class="comment" v-bind:class="[ color[5], delay[5] ]">ほげほげほげほげほげほげ</div>
@@ -24,47 +24,16 @@
 </template>
 
 <script>
+    import axios from 'axios'
+
     export default {
         name: 'app',
         data() {
             return {
                 className: 'white',
-                color: [
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white'
-                ],
-                delay: [
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0'
-                ],
+                color: [],
+                delay: [],
+                tweet: [],
                 colorPalette: [
                     'white',
                     'red',
@@ -121,14 +90,25 @@
                         this.color[i] = this.colorPalette[colorNum]
                     }
                 }
+            },
+            getTweets() {
+                axios.get('/api/get/tweets')
+                    .then(response => {
+                        for (let i = 0; i <= 15; i++) {
+                            this.tweet[i] = response.data[i].tweet
+                        }
+                    })
+                console.log(this.tweet)
             }
         },
         created() {
             this.changeColor()
             this.changeDelay()
+            this.getTweets()
             setInterval(() => {
                 this.changeColor()
                 this.changeDelay()
+                this.getTweets()
             }, 25000)
         },
         mounted() {

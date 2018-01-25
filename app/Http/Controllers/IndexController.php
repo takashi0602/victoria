@@ -7,13 +7,12 @@ use Illuminate\Support\Facades\DB;
 class IndexController extends Controller
 {
     public function setTweets() {
-        $tweets = DB::select('SELECT * FROM tweets');
-        $tweets = json_encode($tweets);
-        return $tweets;
     }
 
     public function getTweets() {
-        return;
+        $tweets = DB::select('SELECT * FROM tweets');
+        $tweets = json_encode($tweets);
+        return $tweets;
     }
 
     /**

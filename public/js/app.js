@@ -13520,6 +13520,8 @@ module.exports = function normalizeComponent (
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
 //
@@ -13546,13 +13548,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'app',
     data: function data() {
         return {
             className: 'white',
-            color: ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
-            delay: ['delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0'],
+            color: [],
+            delay: [],
+            tweet: [],
             colorPalette: ['white', 'red', 'pink', 'orange', 'yellow', 'green', 'light-blue', 'blue', 'purple', 'black'],
             delayPalette: ['delay0', 'delay1', 'delay2', 'delay3', 'delay4', 'delay5', 'delay6', 'delay7', 'delay8', 'delay9', 'delay10', 'delay11', 'delay12', 'delay13', 'delay14', 'delay15', 'delay16', 'delay17']
         };
@@ -13580,16 +13585,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     this.color[i] = this.colorPalette[_colorNum];
                 }
             }
+        },
+        getTweets: function getTweets() {
+            var _this = this;
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/get/tweets').then(function (response) {
+                for (var i = 0; i <= 15; i++) {
+                    _this.tweet[i] = response.data[i].tweet;
+                }
+            });
+            console.log(this.tweet);
         }
     },
     created: function created() {
-        var _this = this;
+        var _this2 = this;
 
         this.changeColor();
         this.changeDelay();
+        this.getTweets();
         setInterval(function () {
-            _this.changeColor();
-            _this.changeDelay();
+            _this2.changeColor();
+            _this2.changeDelay();
+            _this2.getTweets();
         }, 25000);
     },
     mounted: function mounted() {
@@ -13631,7 +13648,7 @@ var render = function() {
           class: [_vm.color[0], _vm.delay[0]],
           attrs: { id: "comment0" }
         },
-        [_vm._v("ほげほげほげほげほげほげ")]
+        [_vm._v("{{}}")]
       ),
       _vm._v(" "),
       _c(
@@ -13641,7 +13658,7 @@ var render = function() {
           class: [_vm.color[1], _vm.delay[1]],
           attrs: { id: "comment1" }
         },
-        [_vm._v("ほげほげほげほげほげほげ")]
+        [_vm._v("{{}}")]
       ),
       _vm._v(" "),
       _c(
@@ -13651,7 +13668,7 @@ var render = function() {
           class: [_vm.color[2], _vm.delay[2]],
           attrs: { id: "comment2" }
         },
-        [_vm._v("ほげほげほげほげほげほげ")]
+        [_vm._v("{{}}")]
       ),
       _vm._v(" "),
       _c(
