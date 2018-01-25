@@ -12,7 +12,11 @@ class TweetCreateSeeder extends Seeder
     public function run()
     {
         for ($i = 1; $i <= 50; $i++) {
-            DB::table('tweets')->insert(['tweet' => $i]);
+            DB::table('tweets')->insert([
+                'tweet' => $i,
+                'created_at' => date("Y/m/d H:i:s", strtotime('+' . $i . ' day')),
+                'updated_at' => date("Y/m/d H:i:s", strtotime('+' . $i . ' day'))
+            ]);
         }
     }
 }
