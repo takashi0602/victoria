@@ -13534,19 +13534,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -13555,9 +13542,71 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             className: 'white',
-            color: [],
-            delay: [],
-            tweet: [],
+            comments: [{
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }, {
+                color: '',
+                delay: '',
+                tweet: ''
+            }],
             colorPalette: ['white', 'red', 'pink', 'orange', 'yellow', 'green', 'light-blue', 'blue', 'purple', 'black'],
             delayPalette: ['delay0', 'delay1', 'delay2', 'delay3', 'delay4', 'delay5', 'delay6', 'delay7', 'delay8', 'delay9', 'delay10', 'delay11', 'delay12', 'delay13', 'delay14', 'delay15', 'delay16', 'delay17']
         };
@@ -13566,9 +13615,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         changeDelay: function changeDelay() {
             var delayNum = Math.floor(Math.random() * 18);
-            for (var i = 0; i <= 17; i++) {
+            for (var i = 0; i <= 15; i++) {
                 delayNum = Math.floor(Math.random() * 18);
-                this.delay[i] = this.delayPalette[delayNum];
+                this.comments[i].delay = this.delayPalette[delayNum];
             }
         },
         changeColor: function changeColor() {
@@ -13577,12 +13626,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             for (var i = 0; i <= 15; i++) {
                 var rand = Math.random();
                 if (rand < 0.6) {
-                    this.color[i] = 'white';
+                    this.comments[i].color = 'white';
                 } else if (rand < 0.8) {
-                    this.color[i] = 'red';
+                    this.comments[i].color = 'red';
                 } else {
                     var _colorNum = Math.floor(Math.random() * 10);
-                    this.color[i] = this.colorPalette[_colorNum];
+                    this.comments[i].color = this.colorPalette[_colorNum];
                 }
             }
         },
@@ -13591,10 +13640,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/get/tweets').then(function (response) {
                 for (var i = 0; i <= 15; i++) {
-                    _this.tweet[i] = response.data[i].tweet;
+                    _this.comments[i].tweet = response.data[i].tweet;
                 }
             });
-            console.log(this.tweet);
         }
     },
     created: function created() {
@@ -13633,174 +13681,33 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "app" } }, [
-    _c("div", { staticClass: "box" }, [
-      _c("video", {
-        staticClass: "video",
-        attrs: { autoplay: "", id: "video" }
-      }),
-      _vm._v(" "),
-      _c("div", { class: _vm.className }),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[0], _vm.delay[0]],
-          attrs: { id: "comment0" }
-        },
-        [_vm._v("{{}}")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[1], _vm.delay[1]],
-          attrs: { id: "comment1" }
-        },
-        [_vm._v("{{}}")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[2], _vm.delay[2]],
-          attrs: { id: "comment2" }
-        },
-        [_vm._v("{{}}")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[3], _vm.delay[3]],
-          attrs: { id: "comment3" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[4], _vm.delay[4]],
-          attrs: { id: "comment4" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[5], _vm.delay[5]],
-          attrs: { id: "comment5" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[6], _vm.delay[6]],
-          attrs: { id: "comment6" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[7], _vm.delay[7]],
-          attrs: { id: "comment7" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[8], _vm.delay[8]],
-          attrs: { id: "comment8" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[9], _vm.delay[9]],
-          attrs: { id: "comment9" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[10], _vm.delay[10]],
-          attrs: { id: "comment10" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[11], _vm.delay[11]],
-          attrs: { id: "comment11" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[12], _vm.delay[12]],
-          attrs: { id: "comment12" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[13], _vm.delay[13]],
-          attrs: { id: "comment13" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[14], _vm.delay[14]],
-          attrs: { id: "comment14" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "comment",
-          class: [_vm.color[15], _vm.delay[15]],
-          attrs: { id: "comment15" }
-        },
-        [_vm._v("ほげほげほげほげほげほげ")]
-      )
-    ])
+    _c(
+      "div",
+      { staticClass: "box" },
+      [
+        _c("video", {
+          staticClass: "video",
+          attrs: { autoplay: "", id: "video" }
+        }),
+        _vm._v(" "),
+        _c("div", { class: _vm.className }),
+        _vm._v(" "),
+        _vm._l(_vm.comments, function(comment, index) {
+          return _c("div", [
+            _c(
+              "div",
+              {
+                staticClass: "comment",
+                class: [comment.color, comment.delay],
+                attrs: { id: "comment" + index }
+              },
+              [_vm._v(_vm._s(comment.tweet))]
+            )
+          ])
+        })
+      ],
+      2
+    )
   ])
 }
 var staticRenderFns = []
