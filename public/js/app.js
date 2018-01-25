@@ -13637,9 +13637,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         setTweets: function setTweets() {
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/set/tweets').then(function (response) {
-                for (var i = 0; i < 30; i++) {
-                    console.log(response.data.statuses[i]);
-                }
+                console.log(response.data);
             });
         },
         getTweets: function getTweets() {
@@ -13656,13 +13654,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this2 = this;
 
         this.setTweets();
+        setInterval(function () {
+            _this2.setTweets();
+        }, 60000);
+
         this.changeColor();
         this.changeDelay();
-        this.getTweets();
+        //            this.getTweets()
         setInterval(function () {
             _this2.changeColor();
             _this2.changeDelay();
-            _this2.getTweets();
+            //                this.getTweets()
         }, 25000);
     },
     mounted: function mounted() {
