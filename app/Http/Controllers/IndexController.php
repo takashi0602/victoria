@@ -17,7 +17,9 @@ class IndexController extends Controller
 
         $response = $connection->get('search/tweets', [
             'q' => '#google -RT',
-            'count' => '30'
+            'count' => '30',
+            'lang' => 'jp',
+            'result_type' => 'recent'
         ]);
 
         for ($i = 0; $i < 29; $i++) {
