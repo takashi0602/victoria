@@ -12983,15 +12983,19 @@ exports.clearImmediate = clearImmediate;
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(35)
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(35)
+}
+var normalizeComponent = __webpack_require__(40)
 /* script */
-var __vue_script__ = __webpack_require__(36)
+var __vue_script__ = __webpack_require__(41)
 /* template */
-var __vue_template__ = __webpack_require__(37)
+var __vue_template__ = __webpack_require__(42)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -13027,6 +13031,382 @@ module.exports = Component.exports
 
 /***/ }),
 /* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(36);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(38)("e4425f12", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8142f38c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8142f38c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(37)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n@charset \"UTF-8\";\n* {\n  margin: 0;\n  padding: 0;\n}\n.box {\n  width: 100%;\n  height: 100vh;\n  overflow: hidden;\n  position: relative;\n}\n.box .video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n.box .comment {\n    position: absolute;\n    right: 0;\n    font-size: 32px;\n    white-space: nowrap;\n    text-shadow: black 0.7px 0.7px 0, black -0.7px -0.7px 0, black -0.7px 0.7px 0, black 0.7px -0.7px 0, black 0 0.7px 0, black -0.7px 0, black -0.7px 0 0, black 0.7px 0 0;\n    /*上、下*/\n    animation-name: comments;\n    animation-duration: 25s;\n    animation-iteration-count: infinite;\n    animation-fill-mode: both;\n    animation-timing-function: linear;\n}\n@keyframes comments {\nfrom {\n    transform: translate(101%, 0);\n}\nto {\n    transform: translate(-4500px, 0);\n}\n}\n.box #comment0 {\n    top: 0px;\n}\n.box #comment1 {\n    top: 50px;\n}\n.box #comment2 {\n    top: 100px;\n}\n.box #comment3 {\n    top: 150px;\n}\n.box #comment4 {\n    top: 200px;\n}\n.box #comment5 {\n    top: 250px;\n}\n.box #comment6 {\n    top: 300px;\n}\n.box #comment7 {\n    top: 350px;\n}\n.box #comment8 {\n    top: 400px;\n}\n.box #comment9 {\n    top: 450px;\n}\n.box #comment10 {\n    top: 500px;\n}\n.box #comment11 {\n    top: 550px;\n}\n.box #comment12 {\n    top: 600px;\n}\n.box #comment13 {\n    top: 650px;\n}\n.box #comment14 {\n    top: 700px;\n}\n.box #comment15 {\n    top: 750px;\n}\n.delay0 {\n  animation-delay: 0s;\n}\n.delay1 {\n  animation-delay: 1s;\n}\n.delay2 {\n  animation-delay: 2s;\n}\n.delay3 {\n  animation-delay: 3s;\n}\n.delay4 {\n  animation-delay: 4s;\n}\n.delay5 {\n  animation-delay: 5s;\n}\n.delay6 {\n  animation-delay: 6s;\n}\n.delay7 {\n  animation-delay: 7s;\n}\n.delay8 {\n  animation-delay: 8s;\n}\n.delay9 {\n  animation-delay: 9s;\n}\n.delay10 {\n  animation-delay: 10s;\n}\n.delay11 {\n  animation-delay: 11s;\n}\n.delay12 {\n  animation-delay: 12s;\n}\n.delay13 {\n  animation-delay: 13s;\n}\n.delay14 {\n  animation-delay: 14s;\n}\n.delay15 {\n  animation-delay: 15s;\n}\n.delay16 {\n  animation-delay: 15s;\n}\n.delay17 {\n  animation-delay: 15s;\n}\n.white {\n  color: #fff;\n}\n.red {\n  color: #ea3423;\n}\n.pink {\n  color: #ef8784;\n}\n.orange {\n  color: #f6c243;\n}\n.yellow {\n  color: #fefe54;\n}\n.green {\n  color: #75fb4c;\n}\n.light-blue {\n  color: #75fbfd;\n}\n.blue {\n  color: #1c00f5;\n}\n.purple {\n  color: #b024f6;\n}\n.black {\n  color: #000;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+  Modified by Evan You @yyx990803
+*/
+
+var hasDocument = typeof document !== 'undefined'
+
+if (typeof DEBUG !== 'undefined' && DEBUG) {
+  if (!hasDocument) {
+    throw new Error(
+    'vue-style-loader cannot be used in a non-browser environment. ' +
+    "Use { target: 'node' } in your Webpack config to indicate a server-rendering environment."
+  ) }
+}
+
+var listToStyles = __webpack_require__(39)
+
+/*
+type StyleObject = {
+  id: number;
+  parts: Array<StyleObjectPart>
+}
+
+type StyleObjectPart = {
+  css: string;
+  media: string;
+  sourceMap: ?string
+}
+*/
+
+var stylesInDom = {/*
+  [id: number]: {
+    id: number,
+    refs: number,
+    parts: Array<(obj?: StyleObjectPart) => void>
+  }
+*/}
+
+var head = hasDocument && (document.head || document.getElementsByTagName('head')[0])
+var singletonElement = null
+var singletonCounter = 0
+var isProduction = false
+var noop = function () {}
+
+// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+// tags it will allow on a page
+var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
+
+module.exports = function (parentId, list, _isProduction) {
+  isProduction = _isProduction
+
+  var styles = listToStyles(parentId, list)
+  addStylesToDom(styles)
+
+  return function update (newList) {
+    var mayRemove = []
+    for (var i = 0; i < styles.length; i++) {
+      var item = styles[i]
+      var domStyle = stylesInDom[item.id]
+      domStyle.refs--
+      mayRemove.push(domStyle)
+    }
+    if (newList) {
+      styles = listToStyles(parentId, newList)
+      addStylesToDom(styles)
+    } else {
+      styles = []
+    }
+    for (var i = 0; i < mayRemove.length; i++) {
+      var domStyle = mayRemove[i]
+      if (domStyle.refs === 0) {
+        for (var j = 0; j < domStyle.parts.length; j++) {
+          domStyle.parts[j]()
+        }
+        delete stylesInDom[domStyle.id]
+      }
+    }
+  }
+}
+
+function addStylesToDom (styles /* Array<StyleObject> */) {
+  for (var i = 0; i < styles.length; i++) {
+    var item = styles[i]
+    var domStyle = stylesInDom[item.id]
+    if (domStyle) {
+      domStyle.refs++
+      for (var j = 0; j < domStyle.parts.length; j++) {
+        domStyle.parts[j](item.parts[j])
+      }
+      for (; j < item.parts.length; j++) {
+        domStyle.parts.push(addStyle(item.parts[j]))
+      }
+      if (domStyle.parts.length > item.parts.length) {
+        domStyle.parts.length = item.parts.length
+      }
+    } else {
+      var parts = []
+      for (var j = 0; j < item.parts.length; j++) {
+        parts.push(addStyle(item.parts[j]))
+      }
+      stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts }
+    }
+  }
+}
+
+function createStyleElement () {
+  var styleElement = document.createElement('style')
+  styleElement.type = 'text/css'
+  head.appendChild(styleElement)
+  return styleElement
+}
+
+function addStyle (obj /* StyleObjectPart */) {
+  var update, remove
+  var styleElement = document.querySelector('style[data-vue-ssr-id~="' + obj.id + '"]')
+
+  if (styleElement) {
+    if (isProduction) {
+      // has SSR styles and in production mode.
+      // simply do nothing.
+      return noop
+    } else {
+      // has SSR styles but in dev mode.
+      // for some reason Chrome can't handle source map in server-rendered
+      // style tags - source maps in <style> only works if the style tag is
+      // created and inserted dynamically. So we remove the server rendered
+      // styles and inject new ones.
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  if (isOldIE) {
+    // use singleton mode for IE9.
+    var styleIndex = singletonCounter++
+    styleElement = singletonElement || (singletonElement = createStyleElement())
+    update = applyToSingletonTag.bind(null, styleElement, styleIndex, false)
+    remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true)
+  } else {
+    // use multi-style-tag mode in all other cases
+    styleElement = createStyleElement()
+    update = applyToTag.bind(null, styleElement)
+    remove = function () {
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  update(obj)
+
+  return function updateStyle (newObj /* StyleObjectPart */) {
+    if (newObj) {
+      if (newObj.css === obj.css &&
+          newObj.media === obj.media &&
+          newObj.sourceMap === obj.sourceMap) {
+        return
+      }
+      update(obj = newObj)
+    } else {
+      remove()
+    }
+  }
+}
+
+var replaceText = (function () {
+  var textStore = []
+
+  return function (index, replacement) {
+    textStore[index] = replacement
+    return textStore.filter(Boolean).join('\n')
+  }
+})()
+
+function applyToSingletonTag (styleElement, index, remove, obj) {
+  var css = remove ? '' : obj.css
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = replaceText(index, css)
+  } else {
+    var cssNode = document.createTextNode(css)
+    var childNodes = styleElement.childNodes
+    if (childNodes[index]) styleElement.removeChild(childNodes[index])
+    if (childNodes.length) {
+      styleElement.insertBefore(cssNode, childNodes[index])
+    } else {
+      styleElement.appendChild(cssNode)
+    }
+  }
+}
+
+function applyToTag (styleElement, obj) {
+  var css = obj.css
+  var media = obj.media
+  var sourceMap = obj.sourceMap
+
+  if (media) {
+    styleElement.setAttribute('media', media)
+  }
+
+  if (sourceMap) {
+    // https://developer.chrome.com/devtools/docs/javascript-debugging
+    // this makes source maps inside style tags work properly in Chrome
+    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
+    // http://stackoverflow.com/a/26603875
+    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
+  }
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild)
+    }
+    styleElement.appendChild(document.createTextNode(css))
+  }
+}
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+module.exports = function listToStyles (parentId, list) {
+  var styles = []
+  var newStyles = {}
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i]
+    var id = item[0]
+    var css = item[1]
+    var media = item[2]
+    var sourceMap = item[3]
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    }
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] })
+    } else {
+      newStyles[id].parts.push(part)
+    }
+  }
+  return styles
+}
+
+
+/***/ }),
+/* 40 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -13135,7 +13515,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 36 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13146,37 +13526,265 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'app',
     data: function data() {
         return {
-            tweets: [],
-            count: 0
+            className: 'white',
+            color: ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white'],
+            delay: ['delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0', 'delay0'],
+            colorPalette: ['white', 'red', 'pink', 'orange', 'yellow', 'green', 'light-blue', 'blue', 'purple', 'black'],
+            delayPalette: ['delay0', 'delay1', 'delay2', 'delay3', 'delay4', 'delay5', 'delay6', 'delay7', 'delay8', 'delay9', 'delay10', 'delay11', 'delay12', 'delay13', 'delay14', 'delay15', 'delay16', 'delay17']
         };
+    },
+
+    methods: {
+        changeDelay: function changeDelay() {
+            var delayNum = Math.floor(Math.random() * 18);
+            for (var i = 0; i <= 17; i++) {
+                delayNum = Math.floor(Math.random() * 18);
+                this.delay[i] = this.delayPalette[delayNum];
+            }
+        },
+        changeColor: function changeColor() {
+            var colorNum = Math.floor(Math.random() * 10);
+            this.className = this.colorPalette[colorNum];
+            for (var i = 0; i <= 15; i++) {
+                var rand = Math.random();
+                if (rand < 0.6) {
+                    this.color[i] = 'white';
+                } else if (rand < 0.8) {
+                    this.color[i] = 'red';
+                } else {
+                    var _colorNum = Math.floor(Math.random() * 10);
+                    this.color[i] = this.colorPalette[_colorNum];
+                }
+            }
+        }
     },
     created: function created() {
         var _this = this;
 
+        this.changeColor();
+        this.changeDelay();
         setInterval(function () {
-            _this.count++;
-        }, 3000);
+            _this.changeColor();
+            _this.changeDelay();
+        }, 25000);
+    },
+    mounted: function mounted() {
+        var video = document.getElementById('video');
+        var localStream = void 0;
 
-        axios.get('api/search').then(function (response) {
-            console.log(response.data);
-            _this.tweets = response.data;
-        }).catch(function (err) {});
+        navigator.mediaDevices.getUserMedia({
+            video: true,
+            audio: false }).then(function (stream) {
+            localStream = stream;
+            video.src = URL.createObjectURL(localStream);
+        }).catch(function (error) {
+            console.error('Error');
+        });
     }
 });
 
 /***/ }),
-/* 37 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("p", [_vm._v(_vm._s(_vm.count))])])
+  return _c("div", { attrs: { id: "app" } }, [
+    _c("div", { staticClass: "box" }, [
+      _c("video", {
+        staticClass: "video",
+        attrs: { autoplay: "", id: "video" }
+      }),
+      _vm._v(" "),
+      _c("div", { class: _vm.className }),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[0], _vm.delay[0]],
+          attrs: { id: "comment0" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[1], _vm.delay[1]],
+          attrs: { id: "comment1" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[2], _vm.delay[2]],
+          attrs: { id: "comment2" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[3], _vm.delay[3]],
+          attrs: { id: "comment3" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[4], _vm.delay[4]],
+          attrs: { id: "comment4" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[5], _vm.delay[5]],
+          attrs: { id: "comment5" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[6], _vm.delay[6]],
+          attrs: { id: "comment6" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[7], _vm.delay[7]],
+          attrs: { id: "comment7" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[8], _vm.delay[8]],
+          attrs: { id: "comment8" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[9], _vm.delay[9]],
+          attrs: { id: "comment9" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[10], _vm.delay[10]],
+          attrs: { id: "comment10" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[11], _vm.delay[11]],
+          attrs: { id: "comment11" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[12], _vm.delay[12]],
+          attrs: { id: "comment12" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[13], _vm.delay[13]],
+          attrs: { id: "comment13" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[14], _vm.delay[14]],
+          attrs: { id: "comment14" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "comment",
+          class: [_vm.color[15], _vm.delay[15]],
+          attrs: { id: "comment15" }
+        },
+        [_vm._v("ほげほげほげほげほげほげ")]
+      )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
