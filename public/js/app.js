@@ -13636,9 +13636,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
         },
         setTweets: function setTweets() {
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/set/tweets').then(function (response) {
-                console.log(response.data);
-            });
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/set/tweets');
         },
         getTweets: function getTweets() {
             var _this = this;

@@ -20,17 +20,14 @@ class IndexController extends Controller
             'count' => '30'
         ]);
 
-        for ($i = 0; $i < 30; $i++) {
-//            $status = $response->data->statuses[$i];
+        for ($i = 0; $i < 29; $i++) {
             DB::table('tweets')->insert([
-//                'tweet' => $status->text,
-//                'created_at' => $status->created_at
-                'tweet' => 'hoge',
-                'created_at' => date("Y/m/d H:i:s", strtotime('+' . $i . ' day'))
+                'tweet' => $response->statuses[$i]->text,
+                'created_at' => $response->statuses[$i]->created_at
             ]);
         }
 
-        return json_encode($response);
+        return;
     }
 
     public function getTweets() {

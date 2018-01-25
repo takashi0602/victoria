@@ -159,9 +159,6 @@
             },
             setTweets() {
                 axios.get('/api/set/tweets')
-                    .then(response => {
-                        console.log(response.data)
-                    })
             },
             getTweets() {
                 axios.get('/api/get/tweets')
