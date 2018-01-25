@@ -13635,6 +13635,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }
             }
         },
+        setTweets: function setTweets() {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/set/tweets').then(function (response) {
+                console.log(response.data);
+            });
+        },
         getTweets: function getTweets() {
             var _this = this;
 
@@ -13648,6 +13653,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     created: function created() {
         var _this2 = this;
 
+        this.setTweets();
         this.changeColor();
         this.changeDelay();
         this.getTweets();
