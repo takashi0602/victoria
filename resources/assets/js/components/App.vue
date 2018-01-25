@@ -157,6 +157,9 @@
                     }
                 }
             },
+            setTweets() {
+                axios.get('/api/set/tweets')
+            },
             getTweets() {
                 axios.get('/api/get/tweets')
                     .then(response => {
@@ -167,6 +170,11 @@
             }
         },
         created() {
+            this.setTweets()
+            setInterval(() => {
+                this.setTweets()
+            }, 60000)
+
             this.changeColor()
             this.changeDelay()
             this.getTweets()
