@@ -15,12 +15,17 @@ class IndexController extends Controller
 
         $connection = new TwitterOAuth($CONSUMER_KEY, $CONSUMER_SECRET, $ACCESS_TOKEN, $ACCESS_TOKEN_SECRET);
 
-        $result = $connection->get('search/tweets', [
+        $response = $connection->get('search/tweets', [
             'q' => '#google -RT',
             'count' => '30'
         ]);
 
-        return json_encode($result);
+        DB::table('tweets')->insert([
+            'tweet' => '',
+            'created_at' => ''
+        ]);
+
+        return;
     }
 
     public function getTweets() {
