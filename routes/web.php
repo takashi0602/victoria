@@ -4,4 +4,6 @@ $router->get('/', function() {
     return view('index');
 });
 
-$router->get('/api/search', 'IndexController@search');
+$router->get('/api/set/tweets', 'IndexController@setTweets');
+
+$router->get('/api/get/tweets', 'IndexController@getTweets');

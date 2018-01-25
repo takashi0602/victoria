@@ -6,7 +6,10 @@ use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
-    public function search() {
+    public function setTweets() {
+    }
+
+    public function getTweets() {
         $tweets = DB::select('SELECT * FROM tweets');
         $tweets = json_encode($tweets);
         return $tweets;

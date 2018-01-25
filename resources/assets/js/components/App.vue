@@ -3,67 +3,102 @@
         <div class="box">
             <video autoplay id="video" class="video"></video>
             <div v-bind:class="className"></div>
-            <div id="comment0" class="comment" v-bind:class="[ color[0], delay[0] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment1" class="comment" v-bind:class="[ color[1], delay[1] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment2" class="comment" v-bind:class="[ color[2], delay[2] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment3" class="comment" v-bind:class="[ color[3], delay[3] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment4" class="comment" v-bind:class="[ color[4], delay[4] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment5" class="comment" v-bind:class="[ color[5], delay[5] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment6" class="comment" v-bind:class="[ color[6], delay[6] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment7" class="comment" v-bind:class="[ color[7], delay[7] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment8" class="comment" v-bind:class="[ color[8], delay[8] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment9" class="comment" v-bind:class="[ color[9], delay[9] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment10" class="comment" v-bind:class="[ color[10], delay[10] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment11" class="comment" v-bind:class="[ color[11], delay[11] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment12" class="comment" v-bind:class="[ color[12], delay[12] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment13" class="comment" v-bind:class="[ color[13], delay[13] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment14" class="comment" v-bind:class="[ color[14], delay[14] ]">ほげほげほげほげほげほげ</div>
-            <div id="comment15" class="comment" v-bind:class="[ color[15], delay[15] ]">ほげほげほげほげほげほげ</div>
+            <div v-for="(comment, index) in comments">
+                <div :id="'comment' + index" class="comment" :class="[ comment.color, comment.delay ]">{{ comment.tweet }}</div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+    import axios from 'axios'
+
     export default {
         name: 'app',
         data() {
             return {
                 className: 'white',
-                color: [
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white'
-                ],
-                delay: [
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0',
-                    'delay0'
+                comments: [
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    },
+                    {
+                        color: '',
+                        delay: '',
+                        tweet: ''
+                    }
                 ],
                 colorPalette: [
                     'white',
@@ -102,9 +137,9 @@
         methods: {
             changeDelay() {
                 let delayNum = Math.floor(Math.random() * 18)
-                for (let i = 0; i <= 17; i++) {
+                for (let i = 0; i <= 15; i++) {
                     delayNum = Math.floor(Math.random() * 18)
-                    this.delay[i] = this.delayPalette[delayNum]
+                    this.comments[i].delay = this.delayPalette[delayNum]
                 }
             },
             changeColor() {
@@ -113,22 +148,32 @@
                 for (let i = 0; i <= 15; i++) {
                     let rand = Math.random()
                     if (rand < 0.6) {
-                        this.color[i] = 'white'
+                        this.comments[i].color = 'white'
                     } else if (rand < 0.8) {
-                        this.color[i] = 'red'
+                        this.comments[i].color = 'red'
                     } else {
                         let colorNum = Math.floor(Math.random() * 10)
-                        this.color[i] = this.colorPalette[colorNum]
+                        this.comments[i].color = this.colorPalette[colorNum]
                     }
                 }
+            },
+            getTweets() {
+                axios.get('/api/get/tweets')
+                    .then(response => {
+                        for (let i = 0; i <= 15; i++) {
+                            this.comments[i].tweet = response.data[i].tweet
+                        }
+                    })
             }
         },
         created() {
             this.changeColor()
             this.changeDelay()
+            this.getTweets()
             setInterval(() => {
                 this.changeColor()
                 this.changeDelay()
+                this.getTweets()
             }, 25000)
         },
         mounted() {
