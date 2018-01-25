@@ -15,7 +15,6 @@ class TweetCreateSeeder extends Seeder
             DB::table('tweets')->insert([
                 'tweet' => $i,
                 'created_at' => date("Y/m/d H:i:s", strtotime('+' . $i . ' day')),
-                'updated_at' => date("Y/m/d H:i:s", strtotime('+' . $i . ' day'))
             ]);
         }
     }
