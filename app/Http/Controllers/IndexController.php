@@ -16,9 +16,8 @@ class IndexController extends Controller
         $connection = new TwitterOAuth($CONSUMER_KEY, $CONSUMER_SECRET, $ACCESS_TOKEN, $ACCESS_TOKEN_SECRET);
 
         $response = $connection->get('search/tweets', [
-            'q' => '#google -RT',
+            'q' => '#osc18os -RT',
             'count' => '30',
-            'lang' => 'jp',
             'result_type' => 'recent'
         ]);
 
