@@ -1,17 +1,17 @@
 # Setup & Build
 
-### Module Install
+### 1. Module Install
 
 ```
 $ composer install
 $ npm i
 ```
 
-### Get the Key and AccessToken from Twitter
+### 2. Get the Key and AccessToken from Twitter
 
 https://apps.twitter.com/
 
-### Create ".env" & set the Key and AccessTokens
+### 3. Create ".env" & set the Key and AccessTokens
 
 ```
 $ cp .env.example .env
@@ -26,7 +26,7 @@ ACCESS_TOKEN_SECRET=:your_access_token_secret
 ...
 ```
 
-### Create "SQLite" & edit ".env"
+### 4. Create "SQLite" & edit ".env"
 
 ```
 $ touch database/database.sqlite
@@ -38,13 +38,13 @@ DB_CONNECTION=sqlite
 ...
 ```
 
-### Run migration
+### 5. Run migration
 
 ```
 $ php artisan migrate
 ```
 
-### Start local server
+### 6. Start local server
 
 ```
 $ php -S localhost:8000 -t public
