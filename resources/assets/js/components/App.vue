@@ -160,7 +160,9 @@
             setTweets() {
                 axios.get('/api/set/tweets')
                     .then(response => {
-                        console.log(response.data)
+                        for (let i = 0; i < 30; i++) {
+                            console.log(response.data.statuses[i])
+                        }
                     })
             },
             getTweets() {
