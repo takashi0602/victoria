@@ -20,11 +20,11 @@
             return data
         },
         methods: {
-            changeDelay() {
+            getDelay() {
                 let delayNum = Math.floor(Math.random() * 18)
                     return this.delayPalette[delayNum]
             },
-            changeColor() {
+            getColor() {
                 this.className = ''
                 let rand = Math.random()
                 if (rand < 0.6) {
@@ -52,15 +52,15 @@
         },
         created() {
             for (let i = 0; i <= 15; i++) {
-                this.comments[i].delay = this.changeDelay()
-                this.comments[i].color = this.changeColor()
+                this.comments[i].delay = this.getDelay()
+                this.comments[i].color = this.getColor()
             }
             this.setTweets()
             this.getTweets()
             setInterval(() => {
                 for (let i = 0; i <= 15; i++) {
-                    this.comments[i].delay = this.changeDelay()
-                    this.comments[i].color = this.changeColor()
+                    this.comments[i].delay = this.getDelay()
+                    this.comments[i].color = this.getColor()
                 }
                 this.setTweets()
                 this.getTweets()

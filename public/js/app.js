@@ -13547,11 +13547,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
-        changeDelay: function changeDelay() {
+        getDelay: function getDelay() {
             var delayNum = Math.floor(Math.random() * 18);
             return this.delayPalette[delayNum];
         },
-        changeColor: function changeColor() {
+        getColor: function getColor() {
             this.className = '';
             var rand = Math.random();
             if (rand < 0.6) {
@@ -13582,15 +13582,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this2 = this;
 
         for (var i = 0; i <= 15; i++) {
-            this.comments[i].delay = this.changeDelay();
-            this.comments[i].color = this.changeColor();
+            this.comments[i].delay = this.getDelay();
+            this.comments[i].color = this.getColor();
         }
         this.setTweets();
         this.getTweets();
         setInterval(function () {
             for (var _i = 0; _i <= 15; _i++) {
-                _this2.comments[_i].delay = _this2.changeDelay();
-                _this2.comments[_i].color = _this2.changeColor();
+                _this2.comments[_i].delay = _this2.getDelay();
+                _this2.comments[_i].color = _this2.getColor();
             }
             _this2.setTweets();
             _this2.getTweets();
