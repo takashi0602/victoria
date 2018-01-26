@@ -164,7 +164,9 @@
                 axios.get('/api/get/tweets')
                     .then(response => {
                         for (let i = 0; i <= 15; i++) {
-                            this.comments[i].tweet = response.data[i].tweet
+                            if (Math.random() <= 0.625) {
+                                this.comments[i].tweet = response.data[i].tweet
+                            }
                         }
                     })
             }
