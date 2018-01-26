@@ -80,6 +80,9 @@
 </script>
 
 <style lang="scss">
+    @import '../../scss/color';
+    @import '../../scss/delay';
+
     * {
         margin: 0;
         padding: 0;
@@ -126,89 +129,5 @@
                 top: $i * 50px;
             }
         }
-    }
-    .delay0 {
-        animation-delay: 0s;
-    }
-    .delay1 {
-        animation-delay: 1s;
-    }
-    .delay2 {
-        animation-delay: 2s;
-    }
-    .delay3 {
-        animation-delay: 3s;
-    }
-    .delay4 {
-        animation-delay: 4s;
-    }
-    .delay5 {
-        animation-delay: 5s;
-    }
-    .delay6 {
-        animation-delay: 6s;
-    }
-    .delay7 {
-        animation-delay: 7s;
-    }
-    .delay8 {
-        animation-delay: 8s;
-    }
-    .delay9 {
-        animation-delay: 9s;
-    }
-    .delay10 {
-        animation-delay: 10s;
-    }
-    .delay11 {
-        animation-delay: 11s;
-    }
-    .delay12 {
-        animation-delay: 12s;
-    }
-    .delay13 {
-        animation-delay: 13s;
-    }
-    .delay14 {
-        animation-delay: 14s;
-    }
-    .delay15 {
-        animation-delay: 15s;
-    }
-    .delay16 {
-        animation-delay: 15s;
-    }
-    .delay17 {
-        animation-delay: 15s;
-    }
-    .white {
-        color: #fff;
-    }
-    .red {
-        color: #ea3423;
-    }
-    .pink {
-        color: #ef8784;
-    }
-    .orange {
-        color: #f6c243;
-    }
-    .yellow {
-        color: #fefe54;
-    }
-    .green {
-        color: #75fb4c;
-    }
-    .light-blue {
-        color: #75fbfd;
-    }
-    .blue {
-        color: #1c00f5;
-    }
-    .purple {
-        color: #b024f6;
-    }
-    .black {
-        color: #000;
     }
 </style>
