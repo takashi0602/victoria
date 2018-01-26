@@ -13064,7 +13064,7 @@ exports = module.exports = __webpack_require__(37)(undefined);
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n* {\n  margin: 0;\n  padding: 0;\n}\n.box {\n  width: 100%;\n  height: 100vh;\n  overflow: hidden;\n  position: relative;\n}\n.box .video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n.box .comment {\n    position: absolute;\n    right: 0;\n    font-size: 32px;\n    white-space: nowrap;\n    text-shadow: black 0.7px 0.7px 0, black -0.7px -0.7px 0, black -0.7px 0.7px 0, black 0.7px -0.7px 0, black 0 0.7px 0, black -0.7px 0, black -0.7px 0 0, black 0.7px 0 0;\n    /*上、下*/\n    animation-name: comments;\n    animation-duration: 30s;\n    animation-iteration-count: infinite;\n    animation-fill-mode: both;\n    animation-timing-function: linear;\n}\n@keyframes comments {\nfrom {\n    transform: translate(101%, 0);\n}\nto {\n    transform: translate(-10000px, 0);\n}\n}\n.box #comment0 {\n    top: 0px;\n}\n.box #comment1 {\n    top: 50px;\n}\n.box #comment2 {\n    top: 100px;\n}\n.box #comment3 {\n    top: 150px;\n}\n.box #comment4 {\n    top: 200px;\n}\n.box #comment5 {\n    top: 250px;\n}\n.box #comment6 {\n    top: 300px;\n}\n.box #comment7 {\n    top: 350px;\n}\n.box #comment8 {\n    top: 400px;\n}\n.box #comment9 {\n    top: 450px;\n}\n.box #comment10 {\n    top: 500px;\n}\n.box #comment11 {\n    top: 550px;\n}\n.box #comment12 {\n    top: 600px;\n}\n.box #comment13 {\n    top: 650px;\n}\n.box #comment14 {\n    top: 700px;\n}\n.box #comment15 {\n    top: 750px;\n}\n.delay0 {\n  animation-delay: 0s;\n}\n.delay1 {\n  animation-delay: 1s;\n}\n.delay2 {\n  animation-delay: 2s;\n}\n.delay3 {\n  animation-delay: 3s;\n}\n.delay4 {\n  animation-delay: 4s;\n}\n.delay5 {\n  animation-delay: 5s;\n}\n.delay6 {\n  animation-delay: 6s;\n}\n.delay7 {\n  animation-delay: 7s;\n}\n.delay8 {\n  animation-delay: 8s;\n}\n.delay9 {\n  animation-delay: 9s;\n}\n.delay10 {\n  animation-delay: 10s;\n}\n.delay11 {\n  animation-delay: 11s;\n}\n.delay12 {\n  animation-delay: 12s;\n}\n.delay13 {\n  animation-delay: 13s;\n}\n.delay14 {\n  animation-delay: 14s;\n}\n.delay15 {\n  animation-delay: 15s;\n}\n.delay16 {\n  animation-delay: 15s;\n}\n.delay17 {\n  animation-delay: 15s;\n}\n.white {\n  color: #fff;\n}\n.red {\n  color: #ea3423;\n}\n.pink {\n  color: #ef8784;\n}\n.orange {\n  color: #f6c243;\n}\n.yellow {\n  color: #fefe54;\n}\n.green {\n  color: #75fb4c;\n}\n.light-blue {\n  color: #75fbfd;\n}\n.blue {\n  color: #1c00f5;\n}\n.purple {\n  color: #b024f6;\n}\n.black {\n  color: #000;\n}\n", ""]);
+exports.push([module.i, "\n.white {\n  color: #fff;\n}\n.red {\n  color: #ea3423;\n}\n.pink {\n  color: #ef8784;\n}\n.orange {\n  color: #f6c243;\n}\n.yellow {\n  color: #fefe54;\n}\n.green {\n  color: #75fb4c;\n}\n.light-blue {\n  color: #75fbfd;\n}\n.blue {\n  color: #1c00f5;\n}\n.purple {\n  color: #b024f6;\n}\n.black {\n  color: #000;\n}\n.delay0 {\n  animation-delay: 0s;\n}\n.delay1 {\n  animation-delay: 1s;\n}\n.delay2 {\n  animation-delay: 2s;\n}\n.delay3 {\n  animation-delay: 3s;\n}\n.delay4 {\n  animation-delay: 4s;\n}\n.delay5 {\n  animation-delay: 5s;\n}\n.delay6 {\n  animation-delay: 6s;\n}\n.delay7 {\n  animation-delay: 7s;\n}\n.delay8 {\n  animation-delay: 8s;\n}\n.delay9 {\n  animation-delay: 9s;\n}\n.delay10 {\n  animation-delay: 10s;\n}\n.delay11 {\n  animation-delay: 11s;\n}\n.delay12 {\n  animation-delay: 12s;\n}\n.delay13 {\n  animation-delay: 13s;\n}\n.delay14 {\n  animation-delay: 14s;\n}\n.delay15 {\n  animation-delay: 15s;\n}\n.delay16 {\n  animation-delay: 15s;\n}\n.delay17 {\n  animation-delay: 15s;\n}\n* {\n  margin: 0;\n  padding: 0;\n}\n.box {\n  width: 100%;\n  height: 100vh;\n  overflow: hidden;\n  position: relative;\n}\n.box .video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n.box .comment {\n    position: absolute;\n    right: 0;\n    font-size: 32px;\n    white-space: nowrap;\n    text-shadow: black 0.7px 0.7px 0, black -0.7px -0.7px 0, black -0.7px 0.7px 0, black 0.7px -0.7px 0, black 0 0.7px 0, black  -0.7px 0, black -0.7px 0 0, black 0.7px 0 0;\n    animation-name: comments;\n    animation-duration: 30s;\n    animation-iteration-count: infinite;\n    animation-fill-mode: both;\n    animation-timing-function: linear;\n}\n@keyframes comments {\nfrom {\n    transform: translate(101%, 0);\n}\nto {\n    transform: translate(-10000px, 0);\n}\n}\n.box #comment0 {\n    top: 0px;\n}\n.box #comment1 {\n    top: 50px;\n}\n.box #comment2 {\n    top: 100px;\n}\n.box #comment3 {\n    top: 150px;\n}\n.box #comment4 {\n    top: 200px;\n}\n.box #comment5 {\n    top: 250px;\n}\n.box #comment6 {\n    top: 300px;\n}\n.box #comment7 {\n    top: 350px;\n}\n.box #comment8 {\n    top: 400px;\n}\n.box #comment9 {\n    top: 450px;\n}\n.box #comment10 {\n    top: 500px;\n}\n.box #comment11 {\n    top: 550px;\n}\n.box #comment12 {\n    top: 600px;\n}\n.box #comment13 {\n    top: 650px;\n}\n.box #comment14 {\n    top: 700px;\n}\n.box #comment15 {\n    top: 750px;\n}\n", ""]);
 
 // exports
 
@@ -13522,6 +13522,8 @@ module.exports = function normalizeComponent (
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_json__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data_json__);
 //
 //
 //
@@ -13533,106 +13535,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'app',
     data: function data() {
-        return {
-            className: 'white',
-            comments: [{
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }],
-            colorPalette: ['white', 'red', 'pink', 'orange', 'yellow', 'green', 'light-blue', 'blue', 'purple', 'black'],
-            delayPalette: ['delay0', 'delay1', 'delay2', 'delay3', 'delay4', 'delay5', 'delay6', 'delay7', 'delay8', 'delay9', 'delay10', 'delay11', 'delay12', 'delay13', 'delay14', 'delay15', 'delay16', 'delay17']
-        };
+        return __WEBPACK_IMPORTED_MODULE_1__data_json___default.a;
     },
 
     methods: {
-        changeDelay: function changeDelay() {
+        getDelay: function getDelay(delay) {
             var delayNum = Math.floor(Math.random() * 18);
-            for (var i = 0; i <= 15; i++) {
-                delayNum = Math.floor(Math.random() * 18);
-                this.comments[i].delay = this.delayPalette[delayNum];
-            }
+            return delay[delayNum];
         },
-        changeColor: function changeColor() {
-            var colorNum = Math.floor(Math.random() * 10);
-            this.className = this.colorPalette[colorNum];
-            for (var i = 0; i <= 15; i++) {
-                var rand = Math.random();
-                if (rand < 0.6) {
-                    this.comments[i].color = 'white';
-                } else if (rand < 0.8) {
-                    this.comments[i].color = 'red';
-                } else {
-                    var _colorNum = Math.floor(Math.random() * 10);
-                    this.comments[i].color = this.colorPalette[_colorNum];
-                }
+        getColor: function getColor(color) {
+            var rand = Math.random();
+            if (rand < 0.6) {
+                return 'white';
+            } else if (rand < 0.8) {
+                return 'red';
+            } else {
+                var colorNum = Math.floor(Math.random() * 10);
+                return color[colorNum];
             }
         },
         setTweets: function setTweets() {
@@ -13653,28 +13579,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     created: function created() {
         var _this2 = this;
 
-        this.changeColor();
-        this.changeDelay();
+        for (var i = 0; i <= 15; i++) {
+            this.comments[i].delay = this.getDelay(this.delayPalette);
+            this.comments[i].color = this.getColor(this.colorPalette);
+        }
         this.setTweets();
         this.getTweets();
         setInterval(function () {
-            _this2.changeColor();
-            _this2.changeDelay();
+            for (var _i = 0; _i <= 15; _i++) {
+                _this2.comments[_i].delay = _this2.getDelay(_this2.delayPalette);
+                _this2.comments[_i].color = _this2.getColor(_this2.colorPalette);
+            }
             _this2.setTweets();
             _this2.getTweets();
         }, 30000);
     },
     mounted: function mounted() {
-        var video = document.getElementById('video');
-        var localStream = void 0;
+        var _this3 = this;
 
         navigator.mediaDevices.getUserMedia({
             video: true,
-            audio: false }).then(function (stream) {
-            localStream = stream;
-            video.src = URL.createObjectURL(localStream);
+            audio: false
+        }).then(function (stream) {
+            _this3.video = URL.createObjectURL(stream);
         }).catch(function (error) {
-            console.error('Error');
+            console.log(error);
         });
     }
 });
@@ -13694,10 +13623,8 @@ var render = function() {
       [
         _c("video", {
           staticClass: "video",
-          attrs: { autoplay: "", id: "video" }
+          attrs: { autoplay: "", src: _vm.video }
         }),
-        _vm._v(" "),
-        _c("div", { class: _vm.className }),
         _vm._v(" "),
         _vm._l(_vm.comments, function(comment, index) {
           return _c("div", [
@@ -13726,6 +13653,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-8142f38c", module.exports)
   }
 }
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports) {
+
+module.exports = {"video":"","comments":[{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""}],"colorPalette":["white","red","pink","orange","yellow","green","light-blue","blue","purple","black"],"delayPalette":["delay0","delay1","delay2","delay3","delay4","delay5","delay6","delay7","delay8","delay9","delay10","delay11","delay12","delay13","delay14","delay15","delay16","delay17"]}
 
 /***/ })
 /******/ ]);
