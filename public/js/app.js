@@ -13546,11 +13546,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
-        getDelay: function getDelay() {
+        getDelay: function getDelay(delay) {
             var delayNum = Math.floor(Math.random() * 18);
-            return this.delayPalette[delayNum];
+            return delay[delayNum];
         },
-        getColor: function getColor() {
+        getColor: function getColor(color) {
             var rand = Math.random();
             if (rand < 0.6) {
                 return 'white';
@@ -13558,7 +13558,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 return 'red';
             } else {
                 var colorNum = Math.floor(Math.random() * 10);
-                return this.colorPalette[colorNum];
+                return color[colorNum];
             }
         },
         setTweets: function setTweets() {
@@ -13580,15 +13580,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this2 = this;
 
         for (var i = 0; i <= 15; i++) {
-            this.comments[i].delay = this.getDelay();
-            this.comments[i].color = this.getColor();
+            this.comments[i].delay = this.getDelay(this.delayPalette);
+            this.comments[i].color = this.getColor(this.colorPalette);
         }
         this.setTweets();
         this.getTweets();
         setInterval(function () {
             for (var _i = 0; _i <= 15; _i++) {
-                _this2.comments[_i].delay = _this2.getDelay();
-                _this2.comments[_i].color = _this2.getColor();
+                _this2.comments[_i].delay = _this2.getDelay(_this2.delayPalette);
+                _this2.comments[_i].color = _this2.getColor(_this2.colorPalette);
             }
             _this2.setTweets();
             _this2.getTweets();

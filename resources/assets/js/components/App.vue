@@ -19,11 +19,11 @@
             return data
         },
         methods: {
-            getDelay() {
+            getDelay(delay) {
                 let delayNum = Math.floor(Math.random() * 18)
-                    return this.delayPalette[delayNum]
+                    return delay[delayNum]
             },
-            getColor() {
+            getColor(color) {
                 let rand = Math.random()
                 if (rand < 0.6) {
                     return 'white'
@@ -31,7 +31,7 @@
                     return 'red'
                 } else {
                     let colorNum = Math.floor(Math.random() * 10)
-                    return this.colorPalette[colorNum]
+                    return color[colorNum]
                 }
             },
             setTweets() {
@@ -50,15 +50,15 @@
         },
         created() {
             for (let i = 0; i <= 15; i++) {
-                this.comments[i].delay = this.getDelay()
-                this.comments[i].color = this.getColor()
+                this.comments[i].delay = this.getDelay(this.delayPalette)
+                this.comments[i].color = this.getColor(this.colorPalette)
             }
             this.setTweets()
             this.getTweets()
             setInterval(() => {
                 for (let i = 0; i <= 15; i++) {
-                    this.comments[i].delay = this.getDelay()
-                    this.comments[i].color = this.getColor()
+                    this.comments[i].delay = this.getDelay(this.delayPalette)
+                    this.comments[i].color = this.getColor(this.colorPalette)
                 }
                 this.setTweets()
                 this.getTweets()
