@@ -182,7 +182,7 @@
                 this.changeColor()
                 this.changeDelay()
                 this.getTweets()
-            }, 25000)
+            }, 30000)
         },
         mounted() {
             const video = document.getElementById('video');
@@ -232,7 +232,7 @@
                     black 0 0.7px 0, black  -0.7px 0,/*右、左*/
                     black -0.7px 0 0, black 0.7px 0 0;/*上、下*/
             animation-name: comments;
-            animation-duration: 25s;
+            animation-duration: 30s;
             animation-iteration-count: infinite;
             animation-fill-mode: both;
             animation-timing-function: linear;
@@ -242,7 +242,7 @@
                 transform: translate(101%, 0);
             }
             to {
-                transform: translate(-4500px, 0);
+                transform: translate(-10000px, 0);
             }
         }
         @for $i from 0 through 15 {
