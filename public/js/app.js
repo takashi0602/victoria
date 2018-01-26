@@ -13549,10 +13549,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         changeDelay: function changeDelay() {
             var delayNum = Math.floor(Math.random() * 18);
-            for (var i = 0; i <= 15; i++) {
-                delayNum = Math.floor(Math.random() * 18);
-                this.comments[i].delay = this.delayPalette[delayNum];
-            }
+            //                for (let i = 0; i <= 15; i++) {
+            //                    delayNum = Math.floor(Math.random() * 18)
+            return this.delayPalette[delayNum];
+            //                }
         },
         changeColor: function changeColor() {
             var colorNum = Math.floor(Math.random() * 10);
@@ -13588,12 +13588,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this2 = this;
 
         this.changeColor();
-        this.changeDelay();
+        for (var i = 0; i <= 15; i++) {
+            this.comments[i].delay = this.changeDelay();
+        }
+        //            this.changeDelay()
         this.setTweets();
         this.getTweets();
         setInterval(function () {
             _this2.changeColor();
-            _this2.changeDelay();
+            //                this.changeDelay()
             _this2.setTweets();
             _this2.getTweets();
         }, 30000);

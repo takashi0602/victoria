@@ -22,10 +22,10 @@
         methods: {
             changeDelay() {
                 let delayNum = Math.floor(Math.random() * 18)
-                for (let i = 0; i <= 15; i++) {
-                    delayNum = Math.floor(Math.random() * 18)
-                    this.comments[i].delay = this.delayPalette[delayNum]
-                }
+//                for (let i = 0; i <= 15; i++) {
+//                    delayNum = Math.floor(Math.random() * 18)
+                    return this.delayPalette[delayNum]
+//                }
             },
             changeColor() {
                 let colorNum = Math.floor(Math.random() * 10)
@@ -58,12 +58,15 @@
         },
         created() {
             this.changeColor()
-            this.changeDelay()
+            for (let i = 0; i <= 15; i++) {
+                this.comments[i].delay = this.changeDelay()
+            }
+//            this.changeDelay()
             this.setTweets()
             this.getTweets()
             setInterval(() => {
                 this.changeColor()
-                this.changeDelay()
+//                this.changeDelay()
                 this.setTweets()
                 this.getTweets()
             }, 30000)
