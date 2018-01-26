@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -70,7 +70,7 @@
 "use strict";
 
 
-var bind = __webpack_require__(2);
+var bind = __webpack_require__(3);
 var isBuffer = __webpack_require__(14);
 
 /*global toString:true*/
@@ -397,10 +397,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(4);
+    adapter = __webpack_require__(5);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(4);
+    adapter = __webpack_require__(5);
   }
   return adapter;
 }
@@ -471,10 +471,16 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(13);
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -492,7 +498,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -682,7 +688,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -693,7 +699,7 @@ var settle = __webpack_require__(17);
 var buildURL = __webpack_require__(19);
 var parseHeaders = __webpack_require__(20);
 var isURLSameOrigin = __webpack_require__(21);
-var createError = __webpack_require__(5);
+var createError = __webpack_require__(6);
 var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(22);
 
 module.exports = function xhrAdapter(config) {
@@ -869,7 +875,7 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -894,7 +900,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -906,7 +912,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -932,7 +938,7 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 var g;
@@ -959,14 +965,14 @@ module.exports = g;
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(10);
+module.exports = __webpack_require__(11);
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -975,7 +981,7 @@ module.exports = __webpack_require__(10);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(11);
+__webpack_require__(12);
 
 window.Vue = __webpack_require__(31);
 
@@ -992,7 +998,7 @@ var app = new Vue({
 });
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -1001,7 +1007,7 @@ var app = new Vue({
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(12);
+window.axios = __webpack_require__(2);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -1020,12 +1026,6 @@ if (token) {
 }
 
 /***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(13);
-
-/***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1033,7 +1033,7 @@ module.exports = __webpack_require__(13);
 
 
 var utils = __webpack_require__(0);
-var bind = __webpack_require__(2);
+var bind = __webpack_require__(3);
 var Axios = __webpack_require__(15);
 var defaults = __webpack_require__(1);
 
@@ -1068,9 +1068,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(7);
+axios.Cancel = __webpack_require__(8);
 axios.CancelToken = __webpack_require__(29);
-axios.isCancel = __webpack_require__(6);
+axios.isCancel = __webpack_require__(7);
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -1223,7 +1223,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(5);
+var createError = __webpack_require__(6);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -1658,7 +1658,7 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(26);
-var isCancel = __webpack_require__(6);
+var isCancel = __webpack_require__(7);
 var defaults = __webpack_require__(1);
 var isAbsoluteURL = __webpack_require__(27);
 var combineURLs = __webpack_require__(28);
@@ -1818,7 +1818,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 "use strict";
 
 
-var Cancel = __webpack_require__(7);
+var Cancel = __webpack_require__(8);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -12724,7 +12724,7 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8), __webpack_require__(32).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(32).setImmediate))
 
 /***/ }),
 /* 32 */
@@ -12976,7 +12976,7 @@ exports.clearImmediate = clearImmediate;
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8), __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(4)))
 
 /***/ }),
 /* 34 */
@@ -13064,7 +13064,7 @@ exports = module.exports = __webpack_require__(37)(undefined);
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n* {\n  margin: 0;\n  padding: 0;\n}\n.box {\n  width: 100%;\n  height: 100vh;\n  overflow: hidden;\n  position: relative;\n}\n.box .video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n.box .comment {\n    position: absolute;\n    right: 0;\n    font-size: 32px;\n    white-space: nowrap;\n    text-shadow: black 0.7px 0.7px 0, black -0.7px -0.7px 0, black -0.7px 0.7px 0, black 0.7px -0.7px 0, black 0 0.7px 0, black -0.7px 0, black -0.7px 0 0, black 0.7px 0 0;\n    /*上、下*/\n    animation-name: comments;\n    animation-duration: 25s;\n    animation-iteration-count: infinite;\n    animation-fill-mode: both;\n    animation-timing-function: linear;\n}\n@keyframes comments {\nfrom {\n    transform: translate(101%, 0);\n}\nto {\n    transform: translate(-4500px, 0);\n}\n}\n.box #comment0 {\n    top: 0px;\n}\n.box #comment1 {\n    top: 50px;\n}\n.box #comment2 {\n    top: 100px;\n}\n.box #comment3 {\n    top: 150px;\n}\n.box #comment4 {\n    top: 200px;\n}\n.box #comment5 {\n    top: 250px;\n}\n.box #comment6 {\n    top: 300px;\n}\n.box #comment7 {\n    top: 350px;\n}\n.box #comment8 {\n    top: 400px;\n}\n.box #comment9 {\n    top: 450px;\n}\n.box #comment10 {\n    top: 500px;\n}\n.box #comment11 {\n    top: 550px;\n}\n.box #comment12 {\n    top: 600px;\n}\n.box #comment13 {\n    top: 650px;\n}\n.box #comment14 {\n    top: 700px;\n}\n.box #comment15 {\n    top: 750px;\n}\n.delay0 {\n  animation-delay: 0s;\n}\n.delay1 {\n  animation-delay: 1s;\n}\n.delay2 {\n  animation-delay: 2s;\n}\n.delay3 {\n  animation-delay: 3s;\n}\n.delay4 {\n  animation-delay: 4s;\n}\n.delay5 {\n  animation-delay: 5s;\n}\n.delay6 {\n  animation-delay: 6s;\n}\n.delay7 {\n  animation-delay: 7s;\n}\n.delay8 {\n  animation-delay: 8s;\n}\n.delay9 {\n  animation-delay: 9s;\n}\n.delay10 {\n  animation-delay: 10s;\n}\n.delay11 {\n  animation-delay: 11s;\n}\n.delay12 {\n  animation-delay: 12s;\n}\n.delay13 {\n  animation-delay: 13s;\n}\n.delay14 {\n  animation-delay: 14s;\n}\n.delay15 {\n  animation-delay: 15s;\n}\n.delay16 {\n  animation-delay: 15s;\n}\n.delay17 {\n  animation-delay: 15s;\n}\n.white {\n  color: #fff;\n}\n.red {\n  color: #ea3423;\n}\n.pink {\n  color: #ef8784;\n}\n.orange {\n  color: #f6c243;\n}\n.yellow {\n  color: #fefe54;\n}\n.green {\n  color: #75fb4c;\n}\n.light-blue {\n  color: #75fbfd;\n}\n.blue {\n  color: #1c00f5;\n}\n.purple {\n  color: #b024f6;\n}\n.black {\n  color: #000;\n}\n", ""]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n* {\n  margin: 0;\n  padding: 0;\n}\n.box {\n  width: 100%;\n  height: 100vh;\n  overflow: hidden;\n  position: relative;\n}\n.box .video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n.box .comment {\n    position: absolute;\n    right: 0;\n    font-size: 32px;\n    white-space: nowrap;\n    text-shadow: black 0.7px 0.7px 0, black -0.7px -0.7px 0, black -0.7px 0.7px 0, black 0.7px -0.7px 0, black 0 0.7px 0, black -0.7px 0, black -0.7px 0 0, black 0.7px 0 0;\n    /*上、下*/\n    animation-name: comments;\n    animation-duration: 30s;\n    animation-iteration-count: infinite;\n    animation-fill-mode: both;\n    animation-timing-function: linear;\n}\n@keyframes comments {\nfrom {\n    transform: translate(101%, 0);\n}\nto {\n    transform: translate(-10000px, 0);\n}\n}\n.box #comment0 {\n    top: 0px;\n}\n.box #comment1 {\n    top: 50px;\n}\n.box #comment2 {\n    top: 100px;\n}\n.box #comment3 {\n    top: 150px;\n}\n.box #comment4 {\n    top: 200px;\n}\n.box #comment5 {\n    top: 250px;\n}\n.box #comment6 {\n    top: 300px;\n}\n.box #comment7 {\n    top: 350px;\n}\n.box #comment8 {\n    top: 400px;\n}\n.box #comment9 {\n    top: 450px;\n}\n.box #comment10 {\n    top: 500px;\n}\n.box #comment11 {\n    top: 550px;\n}\n.box #comment12 {\n    top: 600px;\n}\n.box #comment13 {\n    top: 650px;\n}\n.box #comment14 {\n    top: 700px;\n}\n.box #comment15 {\n    top: 750px;\n}\n.delay0 {\n  animation-delay: 0s;\n}\n.delay1 {\n  animation-delay: 1s;\n}\n.delay2 {\n  animation-delay: 2s;\n}\n.delay3 {\n  animation-delay: 3s;\n}\n.delay4 {\n  animation-delay: 4s;\n}\n.delay5 {\n  animation-delay: 5s;\n}\n.delay6 {\n  animation-delay: 6s;\n}\n.delay7 {\n  animation-delay: 7s;\n}\n.delay8 {\n  animation-delay: 8s;\n}\n.delay9 {\n  animation-delay: 9s;\n}\n.delay10 {\n  animation-delay: 10s;\n}\n.delay11 {\n  animation-delay: 11s;\n}\n.delay12 {\n  animation-delay: 12s;\n}\n.delay13 {\n  animation-delay: 13s;\n}\n.delay14 {\n  animation-delay: 14s;\n}\n.delay15 {\n  animation-delay: 15s;\n}\n.delay16 {\n  animation-delay: 15s;\n}\n.delay17 {\n  animation-delay: 15s;\n}\n.white {\n  color: #fff;\n}\n.red {\n  color: #ea3423;\n}\n.pink {\n  color: #ef8784;\n}\n.orange {\n  color: #f6c243;\n}\n.yellow {\n  color: #fefe54;\n}\n.green {\n  color: #75fb4c;\n}\n.light-blue {\n  color: #75fbfd;\n}\n.blue {\n  color: #1c00f5;\n}\n.purple {\n  color: #b024f6;\n}\n.black {\n  color: #000;\n}\n", ""]);
 
 // exports
 
@@ -13520,7 +13520,7 @@ module.exports = function normalizeComponent (
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
@@ -13643,7 +13643,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/get/tweets').then(function (response) {
                 for (var i = 0; i <= 15; i++) {
-                    _this.comments[i].tweet = response.data[i].tweet;
+                    if (Math.random() <= 0.625) {
+                        _this.comments[i].tweet = response.data[i].tweet;
+                    }
                 }
             });
         }
@@ -13663,7 +13665,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             _this2.changeColor();
             _this2.changeDelay();
             _this2.getTweets();
-        }, 25000);
+        }, 30000);
     },
     mounted: function mounted() {
         var video = document.getElementById('video');
