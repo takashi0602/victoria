@@ -13623,7 +13623,7 @@ var render = function() {
       [
         _c("video", {
           staticClass: "video",
-          attrs: { autoplay: "", id: "video", src: _vm.video }
+          attrs: { autoplay: "", src: _vm.video }
         }),
         _vm._v(" "),
         _vm._l(_vm.comments, function(comment, index) {

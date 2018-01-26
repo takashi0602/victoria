@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div class="box">
-            <video autoplay id="video" class="video" :src="video"></video>
+            <video autoplay class="video" :src="video"></video>
             <div v-for="(comment, index) in comments">
                 <div :id="'comment' + index" class="comment" :class="[ comment.color, comment.delay ]">{{ comment.tweet }}</div>
             </div>
