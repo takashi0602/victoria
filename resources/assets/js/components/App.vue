@@ -25,18 +25,15 @@
                     return this.delayPalette[delayNum]
             },
             changeColor() {
-                let colorNum = Math.floor(Math.random() * 10)
-                this.className = this.colorPalette[colorNum]
-                for (let i = 0; i <= 15; i++) {
-                    let rand = Math.random()
-                    if (rand < 0.6) {
-                        this.comments[i].color = 'white'
-                    } else if (rand < 0.8) {
-                        this.comments[i].color = 'red'
-                    } else {
-                        let colorNum = Math.floor(Math.random() * 10)
-                        this.comments[i].color = this.colorPalette[colorNum]
-                    }
+                this.className = ''
+                let rand = Math.random()
+                if (rand < 0.6) {
+                    return 'white'
+                } else if (rand < 0.8) {
+                    return 'red'
+                } else {
+                    let colorNum = Math.floor(Math.random() * 10)
+                    return this.colorPalette[colorNum]
                 }
             },
             setTweets() {
@@ -54,16 +51,16 @@
             }
         },
         created() {
-            this.changeColor()
             for (let i = 0; i <= 15; i++) {
                 this.comments[i].delay = this.changeDelay()
+                this.comments[i].color = this.changeColor()
             }
             this.setTweets()
             this.getTweets()
             setInterval(() => {
-                this.changeColor()
                 for (let i = 0; i <= 15; i++) {
                     this.comments[i].delay = this.changeDelay()
+                    this.comments[i].color = this.changeColor()
                 }
                 this.setTweets()
                 this.getTweets()
