@@ -13549,10 +13549,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         changeDelay: function changeDelay() {
             var delayNum = Math.floor(Math.random() * 18);
-            //                for (let i = 0; i <= 15; i++) {
-            //                    delayNum = Math.floor(Math.random() * 18)
             return this.delayPalette[delayNum];
-            //                }
         },
         changeColor: function changeColor() {
             var colorNum = Math.floor(Math.random() * 10);
@@ -13591,12 +13588,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         for (var i = 0; i <= 15; i++) {
             this.comments[i].delay = this.changeDelay();
         }
-        //            this.changeDelay()
         this.setTweets();
         this.getTweets();
         setInterval(function () {
             _this2.changeColor();
-            //                this.changeDelay()
+            for (var _i = 0; _i <= 15; _i++) {
+                _this2.comments[_i].delay = _this2.changeDelay();
+            }
             _this2.setTweets();
             _this2.getTweets();
         }, 30000);
