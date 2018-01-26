@@ -13,10 +13,12 @@ class IndexController extends Controller
         $ACCESS_TOKEN = env('ACCESS_TOKEN');
         $ACCESS_TOKEN_SECRET = env('ACCESS_TOKEN_SECRET');
 
+        $SEARCH_KEYWORD = env('SEARCH_KEYWORD');
+
         $connection = new TwitterOAuth($CONSUMER_KEY, $CONSUMER_SECRET, $ACCESS_TOKEN, $ACCESS_TOKEN_SECRET);
 
         $response = $connection->get('search/tweets', [
-            'q' => '#osc18os -RT',
+            'q' => "#$SEARCH_KEYWORD -RT",
             'count' => '30',
             'result_type' => 'recent'
         ]);

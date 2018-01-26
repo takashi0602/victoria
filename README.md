@@ -7,26 +7,13 @@ $ composer install
 $ npm i
 ```
 
-### 2. Get the Key and AccessToken from Twitter
-
-https://apps.twitter.com/
-
-### 3. Create ".env" & set the Key and AccessTokens
+### 2. Create ".env"
 
 ```
 $ cp .env.example .env
 ```
 
-```
-...
-CONSUMER_KEY=:your_consumer_key
-CONSUMER_SECRET=:your_cunsumer_secret
-ACCESS_TOKEN=:your_access_token
-ACCESS_TOKEN_SECRET=:your_access_token_secret
-...
-```
-
-### 4. Create "SQLite" & edit ".env"
+### 3. Create "SQLite" & edit ".env"
 
 ```
 $ touch database/database.sqlite
@@ -38,13 +25,36 @@ DB_CONNECTION=sqlite
 ...
 ```
 
-### 5. Run migration
+### 4. Run migration
 
 ```
 $ php artisan migrate
 ```
 
-### 6. Start up local server
+### 5. Get the Key and AccessToken from Twitter
+
+https://apps.twitter.com/
+
+### 6. set the Key and AccessTokens
+
+```
+...
+CONSUMER_KEY=:your_consumer_key
+CONSUMER_SECRET=:your_cunsumer_secret
+ACCESS_TOKEN=:your_access_token
+ACCESS_TOKEN_SECRET=:your_access_token_secret
+...
+```
+
+### 7. Set the search keyword for Twitter
+
+```
+...
+SEARCH_KEYWORD=:your_search_keyword
+...
+```
+
+### 8. Start up local server
 
 ```
 $ php -S localhost:8000 -t public
