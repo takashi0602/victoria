@@ -68,36 +68,6 @@
                         color: '',
                         delay: '',
                         tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
                     }
                 ],
                 colorPalette: [
@@ -137,7 +107,7 @@
         methods: {
             changeDelay() {
                 let delayNum = Math.floor(Math.random() * 18)
-                for (let i = 0; i <= 15; i++) {
+                for (let i = 0; i <= 9; i++) {
                     delayNum = Math.floor(Math.random() * 18)
                     this.comments[i].delay = this.delayPalette[delayNum]
                 }
@@ -145,7 +115,7 @@
             changeColor() {
                 let colorNum = Math.floor(Math.random() * 10)
                 this.className = this.colorPalette[colorNum]
-                for (let i = 0; i <= 15; i++) {
+                for (let i = 0; i <= 9; i++) {
                     let rand = Math.random()
                     if (rand < 0.6) {
                         this.comments[i].color = 'white'
@@ -163,7 +133,7 @@
             getTweets() {
                 axios.get('/api/get/tweets')
                     .then(response => {
-                        for (let i = 0; i <= 15; i++) {
+                        for (let i = 0; i <= 10; i++) {
                             this.comments[i].tweet = response.data[i].tweet
                         }
                     })
@@ -245,9 +215,9 @@
                 transform: translate(-10000px, 0);
             }
         }
-        @for $i from 0 through 15 {
+        @for $i from 0 through 10 {
             #comment#{$i} {
-                top: $i * 50px;
+                top: $i * 91px;
             }
         }
     }
