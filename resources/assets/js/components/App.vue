@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div class="box">
-            <video autoplay id="video" class="video"></video>
+            <video autoplay id="video" class="video" :src="video"></video>
             <div v-for="(comment, index) in comments">
                 <div :id="'comment' + index" class="comment" :class="[ comment.color, comment.delay ]">{{ comment.tweet }}</div>
             </div>
@@ -65,20 +65,16 @@
             }, 30000)
         },
         mounted() {
-            const video = document.getElementById('video');
-            let localStream;
-
             navigator.mediaDevices.getUserMedia({
                 video: true,
-                audio: false}
-            )
+                audio: false
+            })
                 .then(stream => {
-                    localStream = stream;
-                    video.src = URL.createObjectURL(localStream);
+                    this.video = URL.createObjectURL(stream)
                 })
                 .catch(error => {
-                    console.error('Error');
-                });
+                    console.log(error)
+                })
         }
     }
 </script>

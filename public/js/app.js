@@ -13595,16 +13595,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }, 30000);
     },
     mounted: function mounted() {
-        var video = document.getElementById('video');
-        var localStream = void 0;
+        var _this3 = this;
 
         navigator.mediaDevices.getUserMedia({
             video: true,
-            audio: false }).then(function (stream) {
-            localStream = stream;
-            video.src = URL.createObjectURL(localStream);
+            audio: false
+        }).then(function (stream) {
+            _this3.video = URL.createObjectURL(stream);
         }).catch(function (error) {
-            console.error('Error');
+            console.log(error);
         });
     }
 });
@@ -13624,7 +13623,7 @@ var render = function() {
       [
         _c("video", {
           staticClass: "video",
-          attrs: { autoplay: "", id: "video" }
+          attrs: { autoplay: "", id: "video", src: _vm.video }
         }),
         _vm._v(" "),
         _vm._l(_vm.comments, function(comment, index) {
@@ -13659,7 +13658,7 @@ if (false) {
 /* 43 */
 /***/ (function(module, exports) {
 
-module.exports = {"comments":[{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""}],"colorPalette":["white","red","pink","orange","yellow","green","light-blue","blue","purple","black"],"delayPalette":["delay0","delay1","delay2","delay3","delay4","delay5","delay6","delay7","delay8","delay9","delay10","delay11","delay12","delay13","delay14","delay15","delay16","delay17"]}
+module.exports = {"video":"","comments":[{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""}],"colorPalette":["white","red","pink","orange","yellow","green","light-blue","blue","purple","black"],"delayPalette":["delay0","delay1","delay2","delay3","delay4","delay5","delay6","delay7","delay8","delay9","delay10","delay11","delay12","delay13","delay14","delay15","delay16","delay17"]}
 
 /***/ })
 /******/ ]);
