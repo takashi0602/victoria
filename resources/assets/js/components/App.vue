@@ -172,17 +172,14 @@
             }
         },
         created() {
-            this.setTweets()
-            setInterval(() => {
-                this.setTweets()
-            }, 60000)
-
             this.changeColor()
             this.changeDelay()
+            this.setTweets()
             this.getTweets()
             setInterval(() => {
                 this.changeColor()
                 this.changeDelay()
+                this.setTweets()
                 this.getTweets()
             }, 30000)
         },
