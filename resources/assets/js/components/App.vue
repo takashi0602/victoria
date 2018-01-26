@@ -37,12 +37,12 @@
             setTweets() {
                 axios.get('/api/set/tweets')
             },
-            getTweets() {
+            getTweets(comments) {
                 axios.get('/api/get/tweets')
                     .then(response => {
-                        for (let i = 0; i <= 15; i++) {
+                        for (let i = 0; i <= comments.length - 1; i++) {
                             if (Math.random() <= 0.625) {
-                                this.comments[i].tweet = response.data[i].tweet
+                                comments[i].tweet = response.data[i].tweet
                             }
                         }
                     })
@@ -54,14 +54,14 @@
                 this.comments[i].color = this.getColor(this.colorPalette)
             }
             this.setTweets()
-            this.getTweets()
+            this.getTweets(this.comments)
             setInterval(() => {
                 for (let i = 0; i <= 15; i++) {
                     this.comments[i].delay = this.getDelay(this.delayPalette)
                     this.comments[i].color = this.getColor(this.colorPalette)
                 }
                 this.setTweets()
-                this.getTweets()
+                this.getTweets(this.comments)
             }, 30000)
         },
         mounted() {

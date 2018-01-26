@@ -13564,44 +13564,42 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         setTweets: function setTweets() {
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/set/tweets');
         },
-        getTweets: function getTweets() {
-            var _this = this;
-
+        getTweets: function getTweets(comments) {
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/get/tweets').then(function (response) {
-                for (var i = 0; i <= 15; i++) {
+                for (var i = 0; i <= comments.length - 1; i++) {
                     if (Math.random() <= 0.625) {
-                        _this.comments[i].tweet = response.data[i].tweet;
+                        comments[i].tweet = response.data[i].tweet;
                     }
                 }
             });
         }
     },
     created: function created() {
-        var _this2 = this;
+        var _this = this;
 
         for (var i = 0; i <= 15; i++) {
             this.comments[i].delay = this.getDelay(this.delayPalette);
             this.comments[i].color = this.getColor(this.colorPalette);
         }
         this.setTweets();
-        this.getTweets();
+        this.getTweets(this.comments);
         setInterval(function () {
             for (var _i = 0; _i <= 15; _i++) {
-                _this2.comments[_i].delay = _this2.getDelay(_this2.delayPalette);
-                _this2.comments[_i].color = _this2.getColor(_this2.colorPalette);
+                _this.comments[_i].delay = _this.getDelay(_this.delayPalette);
+                _this.comments[_i].color = _this.getColor(_this.colorPalette);
             }
-            _this2.setTweets();
-            _this2.getTweets();
+            _this.setTweets();
+            _this.getTweets(_this.comments);
         }, 30000);
     },
     mounted: function mounted() {
-        var _this3 = this;
+        var _this2 = this;
 
         navigator.mediaDevices.getUserMedia({
             video: true,
             audio: false
         }).then(function (stream) {
-            _this3.video = URL.createObjectURL(stream);
+            _this2.video = URL.createObjectURL(stream);
         }).catch(function (error) {
             console.log(error);
         });
