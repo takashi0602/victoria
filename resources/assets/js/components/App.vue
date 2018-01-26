@@ -20,7 +20,7 @@
         },
         methods: {
             getDelay(delay) {
-                let delayNum = Math.floor(Math.random() * 18)
+                let delayNum = Math.floor(Math.random() * delay.length)
                     return delay[delayNum]
             },
             getColor(color) {
@@ -30,19 +30,19 @@
                 } else if (rand < 0.8) {
                     return 'red'
                 } else {
-                    let colorNum = Math.floor(Math.random() * 10)
+                    let colorNum = Math.floor(Math.random() * color.length)
                     return color[colorNum]
                 }
             },
             setTweets() {
                 axios.get('/api/set/tweets')
             },
-            getTweets() {
+            getTweets(comments) {
                 axios.get('/api/get/tweets')
                     .then(response => {
-                        for (let i = 0; i <= 15; i++) {
+                        for (let i = 0; i <= comments.length - 1; i++) {
                             if (Math.random() <= 0.625) {
-                                this.comments[i].tweet = response.data[i].tweet
+                                comments[i].tweet = response.data[i].tweet
                             }
                         }
                     })
@@ -54,14 +54,14 @@
                 this.comments[i].color = this.getColor(this.colorPalette)
             }
             this.setTweets()
-            this.getTweets()
+            this.getTweets(this.comments)
             setInterval(() => {
                 for (let i = 0; i <= 15; i++) {
                     this.comments[i].delay = this.getDelay(this.delayPalette)
                     this.comments[i].color = this.getColor(this.colorPalette)
                 }
                 this.setTweets()
-                this.getTweets()
+                this.getTweets(this.comments)
             }, 30000)
         },
         mounted() {
