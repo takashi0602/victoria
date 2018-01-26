@@ -13535,7 +13535,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -13552,7 +13551,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return this.delayPalette[delayNum];
         },
         getColor: function getColor() {
-            this.className = '';
             var rand = Math.random();
             if (rand < 0.6) {
                 return 'white';
@@ -13629,8 +13627,6 @@ var render = function() {
           attrs: { autoplay: "", id: "video" }
         }),
         _vm._v(" "),
-        _c("div", { class: _vm.className }),
-        _vm._v(" "),
         _vm._l(_vm.comments, function(comment, index) {
           return _c("div", [
             _c(
@@ -13663,7 +13659,7 @@ if (false) {
 /* 43 */
 /***/ (function(module, exports) {
 
-module.exports = {"className":"white","comments":[{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""}],"colorPalette":["white","red","pink","orange","yellow","green","light-blue","blue","purple","black"],"delayPalette":["delay0","delay1","delay2","delay3","delay4","delay5","delay6","delay7","delay8","delay9","delay10","delay11","delay12","delay13","delay14","delay15","delay16","delay17"]}
+module.exports = {"comments":[{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""}],"colorPalette":["white","red","pink","orange","yellow","green","light-blue","blue","purple","black"],"delayPalette":["delay0","delay1","delay2","delay3","delay4","delay5","delay6","delay7","delay8","delay9","delay10","delay11","delay12","delay13","delay14","delay15","delay16","delay17"]}
 
 /***/ })
 /******/ ]);

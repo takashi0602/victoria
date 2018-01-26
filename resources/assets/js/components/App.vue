@@ -2,7 +2,6 @@
     <div id="app">
         <div class="box">
             <video autoplay id="video" class="video"></video>
-            <div v-bind:class="className"></div>
             <div v-for="(comment, index) in comments">
                 <div :id="'comment' + index" class="comment" :class="[ comment.color, comment.delay ]">{{ comment.tweet }}</div>
             </div>
@@ -25,7 +24,6 @@
                     return this.delayPalette[delayNum]
             },
             getColor() {
-                this.className = ''
                 let rand = Math.random()
                 if (rand < 0.6) {
                     return 'white'
