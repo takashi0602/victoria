@@ -13547,7 +13547,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         getDelay: function getDelay(delay) {
-            var delayNum = Math.floor(Math.random() * 18);
+            var delayNum = Math.floor(Math.random() * delay.length);
             return delay[delayNum];
         },
         getColor: function getColor(color) {
@@ -13557,7 +13557,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             } else if (rand < 0.8) {
                 return 'red';
             } else {
-                var colorNum = Math.floor(Math.random() * 10);
+                var colorNum = Math.floor(Math.random() * color.length);
                 return color[colorNum];
             }
         },

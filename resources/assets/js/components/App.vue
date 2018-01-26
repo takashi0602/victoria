@@ -20,7 +20,7 @@
         },
         methods: {
             getDelay(delay) {
-                let delayNum = Math.floor(Math.random() * 18)
+                let delayNum = Math.floor(Math.random() * delay.length)
                     return delay[delayNum]
             },
             getColor(color) {
@@ -30,7 +30,7 @@
                 } else if (rand < 0.8) {
                     return 'red'
                 } else {
-                    let colorNum = Math.floor(Math.random() * 10)
+                    let colorNum = Math.floor(Math.random() * color.length)
                     return color[colorNum]
                 }
             },
