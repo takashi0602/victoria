@@ -34,7 +34,7 @@ class IndexController extends Controller
     }
 
     public function getTweets() {
-        $tweets = DB::table('tweets')->latest('created_at')->take(16)->get();
+        $tweets = DB::table('tweets')->orderBy('id')->get();
         $tweets = json_encode($tweets);
         return $tweets;
     }
