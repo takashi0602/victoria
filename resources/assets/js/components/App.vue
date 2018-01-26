@@ -106,10 +106,10 @@
             font-size: 32px;
             white-space: nowrap;
             text-shadow:
-                    black 0.7px 0.7px 0, black -0.7px -0.7px 0,/*右下、左上*/
-                    black -0.7px 0.7px 0, black 0.7px -0.7px 0,/*右上、左下*/
-                    black 0 0.7px 0, black  -0.7px 0,/*右、左*/
-                    black -0.7px 0 0, black 0.7px 0 0;/*上、下*/
+                black 0.7px 0.7px 0, black -0.7px -0.7px 0,
+                black -0.7px 0.7px 0, black 0.7px -0.7px 0,
+                black 0 0.7px 0, black  -0.7px 0,
+                black -0.7px 0 0, black 0.7px 0 0;
             animation-name: comments;
             animation-duration: 30s;
             animation-iteration-count: infinite;
