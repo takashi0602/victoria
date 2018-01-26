@@ -12,127 +12,12 @@
 
 <script>
     import axios from 'axios'
+    import data from './data.json'
 
     export default {
         name: 'app',
         data() {
-            return {
-                className: 'white',
-                comments: [
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    },
-                    {
-                        color: '',
-                        delay: '',
-                        tweet: ''
-                    }
-                ],
-                colorPalette: [
-                    'white',
-                    'red',
-                    'pink',
-                    'orange',
-                    'yellow',
-                    'green',
-                    'light-blue',
-                    'blue',
-                    'purple',
-                    'black'
-                ],
-                delayPalette: [
-                    'delay0',
-                    'delay1',
-                    'delay2',
-                    'delay3',
-                    'delay4',
-                    'delay5',
-                    'delay6',
-                    'delay7',
-                    'delay8',
-                    'delay9',
-                    'delay10',
-                    'delay11',
-                    'delay12',
-                    'delay13',
-                    'delay14',
-                    'delay15',
-                    'delay16',
-                    'delay17',
-                ]
-            }
+            return data
         },
         methods: {
             changeDelay() {

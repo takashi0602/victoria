@@ -13522,6 +13522,8 @@ module.exports = function normalizeComponent (
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_json__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data_json__);
 //
 //
 //
@@ -13534,82 +13536,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'app',
     data: function data() {
-        return {
-            className: 'white',
-            comments: [{
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }, {
-                color: '',
-                delay: '',
-                tweet: ''
-            }],
-            colorPalette: ['white', 'red', 'pink', 'orange', 'yellow', 'green', 'light-blue', 'blue', 'purple', 'black'],
-            delayPalette: ['delay0', 'delay1', 'delay2', 'delay3', 'delay4', 'delay5', 'delay6', 'delay7', 'delay8', 'delay9', 'delay10', 'delay11', 'delay12', 'delay13', 'delay14', 'delay15', 'delay16', 'delay17']
-        };
+        return __WEBPACK_IMPORTED_MODULE_1__data_json___default.a;
     },
 
     methods: {
@@ -13726,6 +13660,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-8142f38c", module.exports)
   }
 }
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports) {
+
+module.exports = {"className":"white","comments":[{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""},{"color":"","delay":"","tweet":""}],"colorPalette":["white","red","pink","orange","yellow","green","light-blue","blue","purple","black"],"delayPalette":["delay0","delay1","delay2","delay3","delay4","delay5","delay6","delay7","delay8","delay9","delay10","delay11","delay12","delay13","delay14","delay15","delay16","delay17"]}
 
 /***/ })
 /******/ ]);
