@@ -36,6 +36,9 @@
             },
             setTweets() {
                 axios.get('/api/set/tweets')
+                    .catch(error => {
+                        console.log(error)
+                    })
             },
             getTweets(comments) {
                 axios.get('/api/get/tweets')
@@ -45,6 +48,9 @@
                                 comments[i].tweet = response.data[i].tweet
                             }
                         }
+                    })
+                    .catch(error => {
+                        console.log(error)
                     })
             }
         },

@@ -13562,7 +13562,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
         },
         setTweets: function setTweets() {
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/set/tweets');
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/set/tweets').catch(function (error) {
+                console.log(error);
+            });
         },
         getTweets: function getTweets(comments) {
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/get/tweets').then(function (response) {
@@ -13571,6 +13573,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                         comments[i].tweet = response.data[i].tweet;
                     }
                 }
+            }).catch(function (error) {
+                console.log(error);
             });
         }
     },
