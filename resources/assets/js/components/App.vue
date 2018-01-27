@@ -52,6 +52,18 @@
                     .catch(error => {
                         console.log(error)
                     })
+            },
+            getVideo() {
+                navigator.mediaDevices.getUserMedia({
+                    video: true,
+                    audio: false
+                })
+                    .then(stream => {
+                        this.video = URL.createObjectURL(stream)
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
             }
         },
         created() {
@@ -71,16 +83,7 @@
             }, 30000)
         },
         mounted() {
-            navigator.mediaDevices.getUserMedia({
-                video: true,
-                audio: false
-            })
-                .then(stream => {
-                    this.video = URL.createObjectURL(stream)
-                })
-                .catch(error => {
-                    console.log(error)
-                })
+            this.getVideo()
         }
     }
 </script>
