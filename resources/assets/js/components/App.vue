@@ -36,6 +36,9 @@
             },
             setTweets() {
                 axios.get('/api/set/tweets')
+                    .catch(error => {
+                        console.log(error)
+                    })
             },
             getTweets(comments) {
                 axios.get('/api/get/tweets')
@@ -45,6 +48,21 @@
                                 comments[i].tweet = response.data[i].tweet
                             }
                         }
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
+            },
+            getVideo() {
+                navigator.mediaDevices.getUserMedia({
+                    video: true,
+                    audio: false
+                })
+                    .then(stream => {
+                        this.video = URL.createObjectURL(stream)
+                    })
+                    .catch(error => {
+                        console.log(error)
                     })
             }
         },
@@ -65,16 +83,7 @@
             }, 30000)
         },
         mounted() {
-            navigator.mediaDevices.getUserMedia({
-                video: true,
-                audio: false
-            })
-                .then(stream => {
-                    this.video = URL.createObjectURL(stream)
-                })
-                .catch(error => {
-                    console.log(error)
-                })
+            this.getVideo()
         }
     }
 </script>
