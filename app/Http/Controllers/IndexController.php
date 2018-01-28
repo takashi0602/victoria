@@ -26,7 +26,6 @@ class IndexController extends Controller
         for ($i = 0; $i < 29; $i++) {
             DB::table('tweets')->insert([
                 'tweet' => $response->statuses[$i]->text,
-                'created_at' => $response->statuses[$i]->created_at
             ]);
         }
 

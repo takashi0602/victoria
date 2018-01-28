@@ -35,7 +35,7 @@ $ php artisan migrate
 
 https://apps.twitter.com/
 
-### 6. set the Key and AccessTokens
+### 6. Set the Key and AccessTokens
 
 ```
 ...
