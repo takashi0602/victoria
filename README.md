@@ -1,6 +1,6 @@
 # Setup & Build
 
-### 1. Module Install
+### 1. Module install
 
 ```
 $ composer install
